@@ -72,10 +72,6 @@ body {
   padding-right: 10px;
 }
 
-.container .grid-2{
-  border: 1px solid green;
-}
-
 .container .grid-2::before{
   font-family: "Font Awesome 5 Free"; 
   content: "\f56b";
