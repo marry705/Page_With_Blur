@@ -1,110 +1,149 @@
+:root{
+  --color-background: #901c25;
+  --color-text: #ffe4a3;
+}
 body {
-    background: #901c25;
-    margin: 0;
-    color: #000000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--color-background);
+  margin: 0;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  
+.showcase::after {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  background-image: url("asset/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  transition: all 1000ms;
   }
   
-  .showcase::after {
-    content: '';
-    height: 100vh;
-    width: 100%;
-    background-image: url("asset/header.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: block;
-    filter: blur(10px);
-    -webkit-filter: blur(10px);
-    transition: all 1000ms;
-  }
+.showcase:hover::after {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
   
-  .showcase:hover::after {
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-  }
+.showcase:hover .showcase_content {
+  filter: blur(2px);
+   -webkit-filter: blur(2px);
+}
   
-  .showcase:hover .showcase_content {
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
-  }
+.showcase_content {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  margin-top: 100px;
+  margin-left: -145px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  transition: all 1000ms;
+}
   
-  .showcase_content {
-    position: absolute;
-    z-index: 1;
-    top: 10%;
-    left: 50%;
-    margin-top: 105px;
-    margin-left: -145px;
-    width: 300px;
-    height: 350px;
-    text-align: center;
-    transition: all 1000ms;
-  }
-  
-.services h3,
-.services .fas,
-.services p{
-  color: #ffe4a3;
+.grid-3 div:first-child::before{
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f5ad";
+  color: var(--color-text);
+  font-weight: 900;
+  font-size: 3rem;
+  padding-right: 10px;
 }
 
+.grid-3 div:nth-child(2)::before{
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f6b7";
+  color: var(--color-text);
+  font-weight: 900;
+  font-size: 3rem;
+  padding-right: 10px;
+}
 
-  .content .logo {
-    height: 180px;
-    width: 180px;
-  }
+.grid-3 div:last-child::before{
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f19c";
+  color: var(--color-text);
+  font-weight: 900;
+  font-size: 3rem;
+  padding-right: 10px;
+}
+
+.container .grid-2{
+  border: 1px solid green;
+}
+
+.container .grid-2::before{
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f56b";
+  font-weight: 900;
+  font-size: 12rem;
+  margin: 0 auto;
+}
+
+.services{
+  color: var(--color-text);
+}
+
+.logo {
+  height: 180px;
+  width: 180px;
+}
   
-  .showcase_content .title {
-    font-size: 2.2rem;
-    margin-top: 1rem;
-  }
+.title {
+  font-size: 2.2rem;
+  margin-top: 0.6rem;
+}
   
-  .showcase_content .showcase_text {
-    line-height: 1.7;
-    margin-top: 1rem;
-  }
+.showcase_text {
+  line-height: 1.7;
+  margin-top: 0.6rem;
+}
   
-  .container {
-    max-width: 960px;
-    margin: auto;
-    overflow: hidden;
-    padding: 4rem 1rem;
-  }
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 4rem 1rem;
+}
   
-  .grid-3 {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-  }
+.grid-3 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
   
-  .grid-2 {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-  }
+.grid-2 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
   
-  .center {
-    text-align: center;
-    margin: auto;
-  }
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
   
-  .bg-light {
-    background: #f4f4f4;
-    color: #333;
-  }
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
   
-  .bg-dark {
-    background: #333;
-    color: #f4f4f4;
-  }
+.bg-dark {
+  background: #333;
+  color: #f4f4f4;
+}
   
-  footer {
-    padding: 2.2rem;
-  }
+footer {
+  padding: 2.2rem;
+}
   
-  footer p {
-    margin: 0;
-  }
+footer p {
+  margin: 0 auto;
+}
   
   @media (max-width: 560px) {
     .showcase::after {
